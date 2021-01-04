@@ -17,7 +17,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity(repositoryClass=InvoiceRepository::class)
  * @ApiResource(
  *     attributes={
- *         "pagination_enabled"=true,
+ *         "pagination_enabled"=false,
  *         "pagination_items_per_page"=20,
  *         "order": {"amount": "desc"}
  *     },
@@ -100,7 +100,7 @@ class Invoice
     private $chrono;
 
     /**
-     * Permet de récupérer le User à qui appartient finaleent la facture
+     * Permet de récupérer le User à qui appartient finalement la facture
      * @Groups({"invoices_read", "invoices_subresource"})
      * @return User
      */
